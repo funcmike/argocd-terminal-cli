@@ -28,16 +28,17 @@ atc -h
 
 Start terminal session to pod using 
 ```shell
-atc term --app-name test-app --app-namespace test-argocd --project-name argocd-project --namespace staging --pod test-pod --container test-container
+atc term --app-name test-app --app-namespace core-argocd --project-name argocd-project --namespace staging --pod test-pod --container test-container
 ```
- `--project-name` is by default `--app-name`
+`--app-namespace` is by default "core-argocd" - this is not a namespace of kubernetes but in ArgoCD
+`--project-name` is by default `--app-name`
 
 Get all resources (`--output yaml` or `json`)
 ```shell
-atc get all --app-name test-app --app-namespace staging
+atc get all --app-name test-app --app-namespace core-argocd
 ```
 
 Get specific resource manifest for ex. POD (`--output yaml` or `json`)
 ```shell
-atc get pod test-pod --app-name test-app --app-namespace test-argocd --namespace staging
+atc get pod test-pod --app-name test-app --app-namespace core-argocd --namespace staging
 ```

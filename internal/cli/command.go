@@ -44,7 +44,7 @@ func setDefaultArgs(flagSet *flag.FlagSet, od *optionsDefault) {
 	flagSet.StringVar(&od.ArgoCDAuthToken, "auth-token", "", "ArgoCD Auth token")
 
 	flagSet.StringVar(&od.AppName, "app-name", "", "ArgoCD app name")
-	flagSet.StringVar(&od.AppNamespace, "app-namespace", "", "ArgoCD app namespace name")
+	flagSet.StringVar(&od.AppNamespace, "app-namespace", "core-argocd", "ArgoCD app namespace name")
 }
 
 func setK8sArgs(flagSet *flag.FlagSet, ok *argocd.OptionsK8s) {
