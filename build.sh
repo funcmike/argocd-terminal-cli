@@ -17,9 +17,9 @@ go build -o build/atc-$GOOS-$GOARCH cmd/atc/main.go
 
 # windows
 export GOOS=windows GOARCH=amd64
-go build -o build/atc-$GOOS-$GOARCH cmd/atc/main.go
+go build -o build/atc-$GOOS-$GOARCH.exe cmd/atc/main.go
 export GOOS=windows GOARCH=arm64
-go build -o build/atc-$GOOS-$GOARCH cmd/atc/main.go
+go build -o build/atc-$GOOS-$GOARCH.exe cmd/atc/main.go
 
 unset GOOS GOARCH
 
